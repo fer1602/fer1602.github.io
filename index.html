@@ -29,7 +29,7 @@ let mostrar_pantalla_juego_términado = true;
 let reiniciar_puntos_al_reiniciar_el_juego = true;
 
 window.onload = async function () {
-  base_preguntas = await readText("base-preguntas.json");
+  const base_preguntas = await readText("base-preguntas.json");
   interprete_bp = JSON.parse(base_preguntas);
   escogerPreguntaAleatoria();
 };
@@ -170,7 +170,6 @@ async function readText(ruta_local) {
   const texto = await response.text();
   return texto;
 }
-
 </script>
 </body>
 </html>
